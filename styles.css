@@ -1,0 +1,75 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-1: #755cde;
+  --color-2: #eb7565;
+  --color-3: #030303;
+  --color-4: #f6a560;
+  --color-5: #61c4b7;
+  --color-6: #7a746e;
+  --color-7: #f39e9e;
+  --color-8: #552049;
+  --color-9: #fff7f0;
+}
+
+body {
+  height: 2595px;
+  width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid: 0.5fr 0.5fr 1fr 3fr 3fr 2fr 0.5fr / 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "hero hero hero hero";
+  font-family: "Plus Jakarta Sans";
+}
+
+/* Navigation */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  grid-area: nav;
+}
+
+.nav-button button {
+  height: 56px;
+  width: 228px;
+  color: var(--color-9);
+  background-color: var(--color-3);
+  border-radius: 28px;
+}
+
+/* Hero Section */
+.hero {
+  grid-area: hero;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.header h1 {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 71px;
+  text-align: center;
+  color: var(--color-3);
+}
+
+.header p {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: var(--color-6);
+}
