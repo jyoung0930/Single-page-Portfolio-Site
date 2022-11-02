@@ -28,7 +28,8 @@ body {
     "nav nav nav nav"
     "hero hero hero hero"
     "card card card card "
-    "bio bio bio bio";
+    "bio bio bio bio"
+    "s s s s";
   font-family: "Plus Jakarta Sans";
   align-items: center;
 }
@@ -208,4 +209,17 @@ nav {
   padding: 15px 30px;
   border: none;
   cursor: pointer;
+}
+
+/* Slide Section */
+
+.swiper {
+  grid-area: s;
+  width: 100%;
+  height: 360px;
+}
+
+.swiper-slide img {
+  height: 360px;
+  width: 540px;
 }

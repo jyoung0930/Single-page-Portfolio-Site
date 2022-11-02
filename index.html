@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <link
       rel="icon"
       type="image/png"
       sizes="32x32"
@@ -71,6 +76,35 @@
         <button>Free Consultation</button>
       </div>
     </section>
+    <!-- Slider main container -->
+    <section class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="./assets/image-slide-1.jpg" alt="slide" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/image-slide-2.jpg" alt="slide" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/image-slide-3.jpg" alt="slide" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/image-slide-4.jpg" alt="slide" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/image-slide-5.jpg" alt="slide" />
+        </div>
+        ...
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </section>
     <!-- Free Consultation
 
   Design solutions made easy
@@ -101,6 +135,7 @@
   Free Consultation
 
   Free Consultation -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
