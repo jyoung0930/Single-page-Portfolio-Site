@@ -19,13 +19,14 @@
 }
 
 body {
-  height: 2595px;
+  /* height: 2595px; */
   font-family: "Plus Jakarta Sans";
 }
 
 /* Navigation */
 
-nav {
+nav,
+footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -219,7 +220,7 @@ nav {
 /* Slide Section */
 
 .swiper {
-  width: 1440px;
+  max-width: 1440px;
   height: 360px;
   margin: 0 auto;
 }
@@ -227,4 +228,138 @@ nav {
 .swiper-slide img {
   height: 100%;
   width: 100%;
+  border-radius: 10px;
+}
+
+/* Contact Section */
+
+.contact {
+  background-color: #030303;
+  height: 320px;
+  width: 1110px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.contact-heading {
+  font-size: 40px;
+  line-height: 50px;
+  color: var(--color-9);
+  margin-bottom: 20px;
+}
+
+.contact-info-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+}
+
+.contact-info {
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--color-9);
+}
+
+.contact-button {
+  background: var(--color-2);
+  height: 56px;
+  width: 228px;
+  border-radius: 28px;
+  color: var(--color-9);
+  cursor: pointer;
+}
+
+/* Tablet Medea Quireis */
+
+@media (max-width: 1140px) {
+  nav,
+  footer,
+  .hero,
+  .cards,
+  .bio,
+  .contact {
+    width: 690px;
+  }
+
+  .contact {
+    flex-direction: column;
+    padding: 40px;
+  }
+  .contact-info-section {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .contact-heading {
+    font-size: 32px;
+  }
+
+  .contact {
+    height: 352px;
+  }
+
+  .swiper-slide img {
+    height: 270px;
+    width: 270px;
+  }
+
+  .bio {
+    width: 100%;
+  }
+
+  .bio img {
+    transform: translateX(-55px);
+  }
+
+  .cards {
+    height: 570px;
+    grid: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "gd gd ui apps"
+      "gd gd ill ill"
+      "pho pho mo mo";
+  }
+}
+
+@media (max-width: 800px) {
+  nav,
+  footer,
+  .hero,
+  .cards,
+  .bio,
+  .contact {
+    width: 343px;
+  }
+
+  .contact {
+    padding: 25px 25px;
+  }
+
+  .contact-info {
+    font-size: 16px;
+  }
+  .contact-info-section {
+    font-size: 16px;
+    justify-content: space-evenly;
+  }
+
+  .contact-heading {
+    margin-bottom: 0;
+    font-size: 26px;
+  }
+
+  .swiper {
+    height: 180px;
+  }
+
+  .swiper-slide img {
+    height: 150px;
+    width: 175px;
+  }
 }
