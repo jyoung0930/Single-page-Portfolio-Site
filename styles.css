@@ -21,6 +21,7 @@
 body {
   /* height: 2595px; */
   font-family: "Plus Jakarta Sans";
+  padding: 10px 0;
 }
 
 /* Navigation */
@@ -42,6 +43,11 @@ footer {
   background-color: var(--color-3);
   border-radius: 28px;
   cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.nav-button button:hover {
+  background-color: var(--color-1);
 }
 
 /* Hero Section */
@@ -166,20 +172,22 @@ footer {
 /* Bio Section */
 
 .bio {
-  grid-area: bio;
   display: grid;
   grid: 1fr / repeat(2, 1fr);
+  grid-template-areas: "pic intro";
   height: 445px;
   width: 1111px;
   margin: 100px auto;
 }
 
 .bio img {
+  grid-area: pic;
   height: 445px;
   width: 445px;
 }
 
 .bio .bio-intro {
+  grid-area: intro;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -203,11 +211,16 @@ footer {
 
 .bio button {
   border-radius: 28px;
-  background-color: var(--color-4);
+  background-color: var(--color-2);
   color: var(--color-9);
   padding: 15px 30px;
   border: none;
   cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.bio button:hover {
+  background-color: var(--color-4);
 }
 
 /* Work Text */
@@ -272,8 +285,12 @@ footer {
   border-radius: 28px;
   color: var(--color-9);
   cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
+.contact-button:hover {
+  background-color: #f6a560;
+}
 /* Tablet Medea Quireis */
 
 @media (max-width: 1140px) {
@@ -359,7 +376,88 @@ footer {
   }
 
   .swiper-slide img {
-    height: 150px;
-    width: 175px;
+    height: 140px;
+    width: 140px;
+  }
+
+  .bio img {
+    transform: translateX(0);
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .bio {
+    grid: repeat(2, 1fr) / 1fr;
+    grid-template-areas:
+      "pic"
+      "intro";
+    height: 602px;
+    gap: 5px;
+  }
+
+  .bio .bio-intro h2 {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 33px;
+    color: var(--color-3);
+  }
+
+  .bio .bio-intro p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    margin: 15px 0;
+  }
+
+  .bio .bio-intro {
+    grid-area: intro;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cards {
+    grid-area: card;
+
+    gap: 20px;
+    grid: repeat(6, 1fr) / repeat(2, 1fr);
+    grid-template-areas:
+      "gd gd"
+      "gd gd"
+      "ui apps"
+      "ill ill"
+      "pho pho"
+      "mo mo";
+    height: 1164px;
+    margin: 50px auto;
+  }
+
+  .hero {
+    height: 210px;
+    margin: 20px auto;
+  }
+
+  .header h1 {
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+    color: var(--color-3);
+    margin-bottom: 20px;
+  }
+
+  .header p {
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: var(--color-6);
+  }
+
+  .contact-button button,
+  .nav-button button {
+    height: 44px;
+    width: 176px;
   }
 }
